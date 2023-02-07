@@ -12,32 +12,39 @@ import {
 } from "@mui/material";
 import CallIcon from "@mui/icons-material/Call";
 import LaunchIcon from "@mui/icons-material/Launch";
-import lizard from "../assets/lizard.jpg";
+import expense from "../assets/expense.JPG";
+import weather from "../assets/weather.JPG";
+import portfolio from "../assets/portfolio.JPG";
+import logger from "../assets/logger.JPG";
 
 const Projects = () => {
   const projects = [
     {
+      id: 1,
       title: "Weather App",
-      description: "Description1",
-      img: { lizard },
+      description: "Weather App screenshot",
+      img: weather,
       tools: ["React", "Axios", "API"],
     },
     {
+      id: 2,
       title: "Expense Tracker",
-      description: "Description1",
-      img: { lizard },
+      description: "Expense Tracker screenshot",
+      img: expense,
       tools: ["React", "CSS", "Bootstrap"],
     },
     {
+      id: 3,
       title: "Online Portfolio",
-      description: "Description1",
-      img: { lizard },
+      description: "Online Portfolio screenshot",
+      img: portfolio,
       tools: ["React", "Material UI"],
     },
     {
+      id: 4,
       title: "Work Logger",
-      description: "Description1",
-      img: { lizard },
+      description: "Work Logger screenshot",
+      img: logger,
       tools: ["HTML", "CSS", "React", "Bootstrap"],
     },
   ];
@@ -73,22 +80,22 @@ const Projects = () => {
       >
         {projects.map((project) => {
           return (
-            <Card sx={{ minWidth: 420 }}>
+            <Card sx={{ minWidth: 440 }} key={project.id}>
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  height="140"
-                  image={lizard}
-                  alt="green iguana"
+                  height="200"
+                  image={project.img}
+                  alt={project.description}
                 />
                 <CardContent>
                   <Typography gutterBottom variant="h5" component="div">
                     {project.title}
                   </Typography>
                   <Typography variant="body2" color="text.secondary">
-                    {project.tools.map((tool) => {
+                    {project.tools.map((tool, index) => {
                       return (
-                        <Typography variant="p" sx={{ m: 1 }}>
+                        <Typography variant="p" sx={{ m: 1 }} key={index}>
                           {tool}
                         </Typography>
                       );
