@@ -7,7 +7,10 @@ const Skills = () => {
   const tools = [
     { name: "HTML", year: "1 Year of Experience" },
     { name: "CSS", year: "1 Year of Experience" },
-    { name: "Javascript", year: "1 Year of Experience" },
+    {
+      name: "Javascript",
+      year: "1 Year of Experience",
+    },
     { name: "React", year: "1 Year of Experience" },
     { name: "Bootstap", year: "1 Year of Experience" },
     { name: "Git", year: "1 Year of Experience" },
@@ -23,7 +26,7 @@ const Skills = () => {
       container
       spacing={{ xs: 2, md: 3 }}
       columns={{ xs: 4, sm: 8, md: 12 }}
-      sx={{ paddingTop: "40px" }}
+      sx={{ paddingTop: "20px" }}
     >
       {tools.map((tool, index) => {
         return (
