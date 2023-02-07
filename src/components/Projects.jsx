@@ -24,7 +24,7 @@ const Projects = () => {
       title: "Weather App",
       description: "Weather App screenshot",
       img: weather,
-      tools: ["React", "Axios", "API"],
+      tools: ["React", "CSS", "Axios", "API"],
     },
     {
       id: 2,

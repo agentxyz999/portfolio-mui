@@ -7,10 +7,7 @@ const Skills = () => {
   const tools = [
     { name: "HTML", year: "1 Year of Experience" },
     { name: "CSS", year: "1 Year of Experience" },
-    {
-      name: "Javascript",
-      year: "1 Year of Experience",
-    },
+    { name: "Javascript", year: "1 Year of Experience" },
     { name: "React", year: "1 Year of Experience" },
     { name: "Bootstap", year: "1 Year of Experience" },
     { name: "Git", year: "1 Year of Experience" },

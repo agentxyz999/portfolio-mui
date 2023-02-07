@@ -33,6 +33,7 @@ const App = () => {
         <Skills />
         <Projects />
         <Contact />
+        <Divider />
         <Footer />
       </Stack>
     </ThemeProvider>
