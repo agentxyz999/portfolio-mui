@@ -19,8 +19,8 @@ const App = () => {
     <ThemeProvider theme={darkTheme}>
       <Stack
         sx={{
-          width: "1200px",
-          outline: "1px dashed gray",
+          width: "900px",
+          // outline: "1px dashed gray",
           justifyContent: "center",
           margin: "auto",
         }}
