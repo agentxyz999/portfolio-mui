@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CssBaseline, Stack } from "@mui/material";
+import { CssBaseline, Stack, Divider } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
 import Header from "./components/Header";
@@ -25,9 +25,11 @@ const App = () => {
           margin: "auto",
         }}
       >
+        {/* reset CSS using CssBaseline */}
         <CssBaseline />
         <Header />
         <About />
+        <Divider textAlign="left">Skills</Divider>
         <Skills />
         <Projects />
         <Contact />

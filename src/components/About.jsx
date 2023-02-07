@@ -6,7 +6,7 @@ import avatar from "../assets/avatar.jpg";
 
 const About = () => {
   return (
-    <Box sx={{ display: "flex", marginTop: "40px" }}>
+    <Box sx={{ display: "flex", margin: "40px 0" }}>
       <Box
         sx={{
           display: "flex",
@@ -29,7 +29,10 @@ const About = () => {
           </Typography>
           .
         </Typography>
-        <Typography variant="p" sx={{ lineHeight: "32px", fontSize: "16px" }}>
+        <Typography
+          variant="p"
+          sx={{ lineHeight: "32px", fontSize: "16px", maxWidth: "68%" }}
+        >
           Based in the Philippines, I'm a front-end developer passionate about
           building accessible web apps that users love.
         </Typography>
@@ -55,6 +58,7 @@ const About = () => {
         </Box>
       </Box>
       <img
+        alt="my avatar"
         src={avatar}
         style={{
           zIndex: -1,
