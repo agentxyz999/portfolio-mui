@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import Snackbar from "@mui/material/Snackbar";
+import MuiAlert from "@mui/material/Alert";
+
 import {
   Box,
   Button,
@@ -11,9 +14,23 @@ import {
 import SendIcon from "@mui/icons-material/Send";
 
 const Contact = () => {
+  // This methods will handle the alert dialog when someone submitted the form
+  const Alert = React.forwardRef(function Alert(props, ref) {
+    return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
+  });
+  const [openAlert, setOpenAlert] = useState(false);
+  const handleClick = () => {
+    setOpenAlert(true);
+  };
+  const handleClose = (event, reason) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpenAlert(false);
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert("Submitted");
+    handleClick();
   };
   return (
     <Box
@@ -42,7 +59,11 @@ const Contact = () => {
         </Typography>
       </Box>
       {/* Form */}
-      <Card>
+      <Card
+        sx={{
+          backgroundColor: "inherit",
+        }}
+      >
         <CardContent>
           <form onSubmit={handleSubmit}>
             <Grid container spacing={1}>
@@ -89,6 +110,11 @@ const Contact = () => {
           </form>
         </CardContent>
       </Card>
+      <Snackbar open={openAlert} autoHideDuration={5000} onClose={handleClose}>
+        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
+          Your message has been sent, thank you!
+        </Alert>
+      </Snackbar>
     </Box>
   );
 };

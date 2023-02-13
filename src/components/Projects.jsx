@@ -25,6 +25,7 @@ const Projects = ({ scrollToSection, contact }) => {
       description: "Weather App screenshot",
       img: weather,
       tools: ["React", "CSS", "Axios", "API"],
+      url: "https://rconde-weather-app.netlify.app/",
     },
     {
       id: 2,
@@ -32,6 +33,7 @@ const Projects = ({ scrollToSection, contact }) => {
       description: "Expense Tracker screenshot",
       img: expense,
       tools: ["React", "CSS", "Bootstrap", "ChartsJS"],
+      url: "https://rconde-expense-tracker-app.netlify.app/",
     },
     {
       id: 3,
@@ -39,6 +41,7 @@ const Projects = ({ scrollToSection, contact }) => {
       description: "Online Portfolio screenshot",
       img: portfolio,
       tools: ["React", "Material UI"],
+      url: "https://rconde-portfolio.netlify.app/",
     },
     {
       id: 4,
@@ -46,6 +49,7 @@ const Projects = ({ scrollToSection, contact }) => {
       description: "Work Logger screenshot",
       img: logger,
       tools: ["HTML", "CSS", "React", "Bootstrap"],
+      url: "https://rconde-logger-app.netlify.app/",
     },
   ];
   return (
@@ -111,6 +115,9 @@ const Projects = ({ scrollToSection, contact }) => {
                   variant="contained"
                   startIcon={<LaunchIcon />}
                   sx={{ mx: 1 }}
+                  onClick={() => {
+                    window.open(project?.url);
+                  }}
                 >
                   Visit
                 </Button>
