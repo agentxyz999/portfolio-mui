@@ -17,7 +17,7 @@ import weather from "../assets/weather.JPG";
 import portfolio from "../assets/portfolio.JPG";
 import logger from "../assets/logger.JPG";
 
-const Projects = () => {
+const Projects = ({ scrollToSection, contact }) => {
   const projects = [
     {
       id: 1,
@@ -64,6 +64,7 @@ const Projects = () => {
           size="medium"
           startIcon={<CallIcon />}
           sx={{ maxWidth: "180px", maxHeight: "40px" }}
+          onClick={() => scrollToSection(contact)} //from App.js
         >
           Contact me.
         </Button>

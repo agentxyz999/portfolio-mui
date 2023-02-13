@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useRef } from "react";
 import { CssBaseline, Stack, Divider } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 
@@ -15,12 +16,19 @@ const App = () => {
       mode: "dark",
     },
   });
+  const contact = useRef(null);
+  //method to scroll to specific section
+  const scrollToSection = (elementRef) => {
+    window.scrollTo({
+      top: elementRef.current.offsetTop,
+      behavior: "smooth",
+    });
+  };
   return (
     <ThemeProvider theme={darkTheme}>
       <Stack
         sx={{
           width: "900px",
-          // outline: "1px dashed gray",
           justifyContent: "center",
           margin: "auto",
         }}
@@ -28,11 +36,13 @@ const App = () => {
         {/* reset CSS using CssBaseline */}
         <CssBaseline />
         <Header />
-        <About />
+        <About scrollToSection={scrollToSection} contact={contact} />
         <Divider textAlign="left">Skills</Divider>
         <Skills />
-        <Projects />
-        <Contact />
+        <Projects scrollToSection={scrollToSection} contact={contact} />
+        <div ref={contact}>
+          <Contact />
+        </div>
         <Divider />
         <Footer />
       </Stack>

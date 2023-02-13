@@ -1,8 +1,20 @@
 import React from "react";
-import { Box, Button, Typography, TextField } from "@mui/material";
+import {
+  Box,
+  Button,
+  Typography,
+  TextField,
+  Grid,
+  Card,
+  CardContent,
+} from "@mui/material";
 import SendIcon from "@mui/icons-material/Send";
 
 const Contact = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    alert("Submitted");
+  };
   return (
     <Box
       sx={{
@@ -30,35 +42,53 @@ const Contact = () => {
         </Typography>
       </Box>
       {/* Form */}
-      <Box
-        component="form"
-        noValidate
-        autoComplete="off"
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          minWidth: "400px",
-          padding: "0 6px",
-          gap: "10px",
-        }}
-      >
-        <TextField id="name" label="Name" variant="standard" />
-        <TextField id="email" label="Email" variant="standard" />
-        <TextField
-          id="message"
-          label="Message"
-          variant="standard"
-          multiline
-          rows={3}
-        />
-        <Button
-          sx={{ alignSelf: "flex-end" }}
-          variant="outlined"
-          endIcon={<SendIcon />}
-        >
-          Send
-        </Button>
-      </Box>
+      <Card>
+        <CardContent>
+          <form onSubmit={handleSubmit}>
+            <Grid container spacing={1}>
+              <Grid xs={12} item>
+                <TextField
+                  id="name"
+                  label="Name"
+                  variant="standard"
+                  fullWidth
+                  required
+                />
+              </Grid>
+              <Grid xs={12} item>
+                <TextField
+                  id="email"
+                  label="Email"
+                  variant="standard"
+                  fullWidth
+                  required
+                />
+              </Grid>
+              <Grid xs={12} item>
+                <TextField
+                  id="message"
+                  label="Message"
+                  variant="standard"
+                  multiline
+                  rows={3}
+                  fullWidth
+                  required
+                />
+              </Grid>
+              <Grid xs={12} item>
+                <Button
+                  sx={{ marginTop: "12px" }}
+                  variant="outlined"
+                  endIcon={<SendIcon />}
+                  type="submit"
+                >
+                  Send
+                </Button>
+              </Grid>
+            </Grid>
+          </form>
+        </CardContent>
+      </Card>
     </Box>
   );
 };

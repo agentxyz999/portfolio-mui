@@ -4,7 +4,7 @@ import CallIcon from "@mui/icons-material/Call";
 import SimCardDownloadIcon from "@mui/icons-material/SimCardDownload";
 import avatar from "../assets/avatar.jpg";
 
-const About = () => {
+const About = ({ scrollToSection, contact }) => {
   const handleDownload = () => {
     console.log("Download");
     window.open(
@@ -49,6 +49,7 @@ const About = () => {
             size="large"
             startIcon={<CallIcon />}
             sx={{ maxWidth: "180px" }}
+            onClick={() => scrollToSection(contact)} //from App.js
           >
             Contact me.
           </Button>
