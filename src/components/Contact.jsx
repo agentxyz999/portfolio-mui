@@ -10,8 +10,8 @@ const Contact = () => {
         gap: 3,
         alignItems: "center",
         justifyContent: "space-between",
-        padding: "0 4px",
-        marginTop: "4px",
+        padding: "10px 4px",
+        marginTop: "2px",
         backgroundColor: "#242424",
       }}
     >
@@ -19,8 +19,8 @@ const Contact = () => {
         <Typography variant="h2">Contact</Typography>
         <Typography
           sx={{
-            margin: "40px 0",
-            padding: "0 6px",
+            margin: "30px 0",
+            padding: "0 4px",
             lineHeight: "32px",
             fontSize: "16px",
           }}
@@ -39,12 +39,18 @@ const Contact = () => {
           flexDirection: "column",
           minWidth: "400px",
           padding: "0 6px",
-          gap: "20px",
+          gap: "10px",
         }}
       >
         <TextField id="name" label="Name" variant="standard" />
         <TextField id="email" label="Email" variant="standard" />
-        <TextField id="message" label="Message" variant="standard" />
+        <TextField
+          id="message"
+          label="Message"
+          variant="standard"
+          multiline
+          rows={3}
+        />
         <Button
           sx={{ alignSelf: "flex-end" }}
           variant="outlined"
