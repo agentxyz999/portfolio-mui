@@ -5,6 +5,12 @@ import SimCardDownloadIcon from "@mui/icons-material/SimCardDownload";
 import avatar from "../assets/avatar.jpg";
 
 const About = () => {
+  const handleDownload = () => {
+    console.log("Download");
+    window.open(
+      "https://drive.google.com/file/d/1P8ZU-IVghVxAs0_E3lSO_MWzt_QFLzJA/view?usp=sharing"
+    );
+  };
   return (
     <Box sx={{ display: "flex", margin: "40px 0" }}>
       <Box
@@ -52,6 +58,7 @@ const About = () => {
             size="large"
             startIcon={<SimCardDownloadIcon />}
             sx={{ maxWidth: "180px", marginLeft: "20px" }}
+            onClick={handleDownload}
           >
             Download CV
           </Button>

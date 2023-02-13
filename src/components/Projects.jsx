@@ -31,7 +31,7 @@ const Projects = () => {
       title: "Expense Tracker",
       description: "Expense Tracker screenshot",
       img: expense,
-      tools: ["React", "CSS", "Bootstrap"],
+      tools: ["React", "CSS", "Bootstrap", "ChartsJS"],
     },
     {
       id: 3,
@@ -109,6 +109,7 @@ const Projects = () => {
                   color="secondary"
                   variant="contained"
                   startIcon={<LaunchIcon />}
+                  sx={{ mx: 1 }}
                 >
                   Visit
                 </Button>

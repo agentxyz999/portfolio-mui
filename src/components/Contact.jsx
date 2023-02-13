@@ -9,8 +9,8 @@ const Contact = () => {
         display: "flex",
         gap: 3,
         alignItems: "center",
-        justifyContent: "center",
-        padding: "40px 0",
+        justifyContent: "space-between",
+        padding: "0 4px",
         marginTop: "4px",
         backgroundColor: "#242424",
       }}
@@ -18,7 +18,12 @@ const Contact = () => {
       <Box sx={{ maxWidth: "400px" }}>
         <Typography variant="h2">Contact</Typography>
         <Typography
-          sx={{ margin: "40px 0", lineHeight: "32px", fontSize: "16px" }}
+          sx={{
+            margin: "40px 0",
+            padding: "0 6px",
+            lineHeight: "32px",
+            fontSize: "16px",
+          }}
         >
           I would like to hear about your project and how I could help. Please
           fill in the form, and I'll get back to you as soon as possible.
@@ -33,6 +38,7 @@ const Contact = () => {
           display: "flex",
           flexDirection: "column",
           minWidth: "400px",
+          padding: "0 6px",
           gap: "20px",
         }}
       >
