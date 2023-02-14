@@ -125,6 +125,7 @@ const Contact = () => {
                   sx={{ marginTop: "12px" }}
                   variant="outlined"
                   color="secondary"
+                  fullWidth
                   endIcon={<SendIcon />}
                   type="submit"
                 >
