@@ -2,7 +2,6 @@ import React from "react";
 import {
   Grid,
   Typography,
-  Box,
   Button,
   Card,
   CardContent,
@@ -53,80 +52,104 @@ const Projects = ({ scrollToSection, contact }) => {
     },
   ];
   return (
-    <Grid sx={{ paddingTop: "40px" }}>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
+    <Card sx={{ marginTop: "6px" }}>
+      <Grid
+        container
+        gap={2}
+        py={2}
+        border={"1px solid 2f2f2f"}
+        borderRadius={1}
       >
-        <Typography variant="h2">Projects</Typography>
-        <Button
-          variant="outlined"
-          color="secondary"
-          size="medium"
-          startIcon={<CallIcon />}
-          sx={{ maxWidth: "180px", maxHeight: "40px" }}
-          onClick={() => scrollToSection(contact)} //from App.js
+        <Grid container item justifyContent="space-between" alignItems="center">
+          <Typography
+            variant="h2"
+            sx={{
+              fontSize: {
+                xl: "60px",
+                lg: "60px",
+                md: "50px",
+                sm: "50px",
+                xs: "32px",
+              },
+            }}
+          >
+            Projects
+          </Typography>
+          <Button
+            variant="outlined"
+            color="secondary"
+            size="medium"
+            startIcon={<CallIcon />}
+            sx={{ maxWidth: "180px", maxHeight: "40px" }}
+            onClick={() => scrollToSection(contact)} //from App.js
+          >
+            Contact me.
+          </Button>
+        </Grid>
+        <Grid
+          container
+          item
+          alignItems="center"
+          justifyContent="center"
+          gap={1}
         >
-          Contact me.
-        </Button>
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          gap: 2,
-          flexWrap: "wrap",
-          alignItems: "center",
-          justifyContent: "center",
-          paddingTop: "20px",
-        }}
-      >
-        {projects.map((project) => {
-          return (
-            <Card sx={{ minWidth: 440 }} key={project.id}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="200"
-                  image={project.img}
-                  alt={project.description}
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    {project.title}
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    {project.tools.map((tool, index) => {
-                      return (
-                        <Typography variant="p" sx={{ m: 1 }} key={index}>
-                          {tool}
-                        </Typography>
-                      );
-                    })}
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button
-                  size="small"
-                  color="secondary"
-                  variant="contained"
-                  startIcon={<LaunchIcon />}
-                  sx={{ mx: 1 }}
-                  onClick={() => {
-                    window.open(project?.url);
+          {projects.map((project) => {
+            return (
+              <Grid key={project.id} item>
+                <Card
+                  sx={{
+                    width: {
+                      xl: "380px",
+                      lg: "380px",
+                      md: "360px",
+                      sm: "400px",
+                      xs: "400px",
+                    },
                   }}
                 >
-                  Visit
-                </Button>
-              </CardActions>
-            </Card>
-          );
-        })}
-      </Box>
-    </Grid>
+                  <CardActionArea>
+                    <CardMedia
+                      component="img"
+                      height="200"
+                      image={project.img}
+                      alt={project.description}
+                    />
+                    <CardContent>
+                      <Typography gutterBottom variant="h5" component="div">
+                        {project.title}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {project.tools.map((tool, index) => {
+                          return (
+                            <Typography variant="p" sx={{ m: 1 }} key={index}>
+                              {tool}
+                            </Typography>
+                          );
+                        })}
+                      </Typography>
+                    </CardContent>
+                  </CardActionArea>
+                  <CardActions>
+                    <Button
+                      size="small"
+                      color="secondary"
+                      variant="contained"
+                      startIcon={<LaunchIcon />}
+                      sx={{ mx: 1 }}
+                      onClick={() => {
+                        window.open(project?.url);
+                      }}
+                    >
+                      Visit
+                    </Button>
+                  </CardActions>
+                </Card>
+              </Grid>
+            );
+          })}
+        </Grid>
+      </Grid>
+    </Card>
   );
 };
 

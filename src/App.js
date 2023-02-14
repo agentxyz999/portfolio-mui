@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { CssBaseline, Stack, Divider } from "@mui/material";
+import { CssBaseline, Divider, Grid } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 // my components
 import Header from "./components/Header";
@@ -25,26 +25,48 @@ const App = () => {
   };
   return (
     <ThemeProvider theme={darkTheme}>
-      <Stack
+      <Grid
+        container
+        direction="column"
         sx={{
-          width: "900px",
-          justifyContent: "center",
-          margin: "auto",
+          margin: "0 auto",
+          maxWidth: {
+            xl: "50%",
+            lg: "75%",
+            md: "85%",
+            sm: "100%",
+          },
         }}
       >
         {/* reset CSS using CssBaseline */}
         <CssBaseline />
-        <Header />
-        <About scrollToSection={scrollToSection} contact={contact} />
-        <Divider textAlign="left">Skills</Divider>
-        <Skills />
-        <Projects scrollToSection={scrollToSection} contact={contact} />
-        <div ref={contact}>
-          <Contact />
-        </div>
-        <Divider />
-        <Footer />
-      </Stack>
+        <Grid item>
+          <Header />
+        </Grid>
+        <Grid item>
+          <About scrollToSection={scrollToSection} contact={contact} />
+        </Grid>
+        <Grid item>
+          <Divider textAlign="left">Skills</Divider>
+        </Grid>
+        <Grid item>
+          <Skills />
+        </Grid>
+        <Grid item>
+          <Projects scrollToSection={scrollToSection} contact={contact} />
+        </Grid>
+        <Grid item>
+          <div ref={contact}>
+            <Contact />
+          </div>
+        </Grid>
+        <Grid item>
+          <Divider />
+        </Grid>
+        <Grid item>
+          <Footer />
+        </Grid>
+      </Grid>
     </ThemeProvider>
   );
 };

@@ -21,14 +21,30 @@ const Skills = () => {
   return (
     <Grid
       container
-      spacing={{ xs: 2, md: 3 }}
-      columns={{ xs: 4, sm: 8, md: 12 }}
-      sx={{ paddingTop: "20px" }}
+      spacing={{ xs: 2, sm: 3, md: 3 }}
+      columns={{ xs: 2, sm: 12, md: 12 }}
+      sx={
+        {
+          // bgcolor: { lg: "green", md: "yellow", sm: "red", xs: "orange" },
+        }
+      }
     >
       {tools.map((tool, index) => {
         return (
           <Grid item xs={2} sm={4} md={4} key={index}>
-            <Item sx={{ fontSize: "30px" }}>{tool.name}</Item>
+            <Item
+              sx={{
+                fontSize: {
+                  xl: "30px",
+                  lg: "30px",
+                  md: "30px",
+                  sm: "26px",
+                  xs: "22px",
+                },
+              }}
+            >
+              {tool.name}
+            </Item>
             <Item>{tool.year}</Item>
           </Grid>
         );

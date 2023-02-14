@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Typography, Grid } from "@mui/material";
 import CallIcon from "@mui/icons-material/Call";
 import SimCardDownloadIcon from "@mui/icons-material/SimCardDownload";
 import avatar from "../assets/avatar.jpg";
@@ -12,21 +12,48 @@ const About = ({ scrollToSection, contact }) => {
     );
   };
   return (
-    <Box sx={{ display: "flex", margin: "40px 0" }}>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          maxWidth: "70%",
-          gap: "40px",
-          padding: "10px",
-        }}
+    <Grid
+      container
+      rowSpacing={2}
+      sx={{
+        textAlign: {
+          xl: "left",
+          lg: "left",
+          md: "left",
+          sm: "left",
+          xs: "center",
+        },
+        justifyContents: {
+          xl: "left",
+          lg: "left",
+          md: "left",
+          sm: "left",
+          xs: "center",
+        },
+      }}
+    >
+      {/* About texts container */}
+      <Grid
+        container
+        direction="column"
+        gap={3}
+        item
+        xl={8}
+        lg={8}
+        md={8}
+        sm={8}
+        xs={12}
       >
         <Typography
           variant="h2"
-          sx={{ fontWeight: "bolder", letterSpacing: 3 }}
+          sx={{
+            fontWeight: "bolder",
+            letterSpacing: 3,
+            fontSize: { md: "50px", sm: "50px", xs: "32px" },
+          }}
         >
-          Nice to meet you! I'm{" "}
+          Nice to meet you!
+          <br /> I'm{" "}
           <Typography
             variant="span"
             sx={{ borderBottom: "4px solid #CE93D8", fontStyle: "italic" }}
@@ -37,7 +64,17 @@ const About = ({ scrollToSection, contact }) => {
         </Typography>
         <Typography
           variant="p"
-          sx={{ lineHeight: "32px", fontSize: "16px", maxWidth: "68%" }}
+          sx={{
+            lineHeight: "32px",
+            fontSize: "16px",
+            maxWidth: {
+              xl: "55%",
+              lg: "55%",
+              md: "55%",
+              sm: "55%",
+              xs: "100%",
+            },
+          }}
         >
           Based in the Philippines, I'm a front-end developer passionate about
           building accessible web apps that users love.
@@ -64,18 +101,29 @@ const About = ({ scrollToSection, contact }) => {
             Download CV
           </Button>
         </Box>
-      </Box>
-      <img
-        alt="my avatar"
-        src={avatar}
-        style={{
-          zIndex: -1,
-          width: "350px",
-          height: "400px",
-          borderRadius: "50%",
-        }}
-      />
-    </Box>
+      </Grid>
+      <Grid
+        item
+        xl={4}
+        lg={4}
+        md={4}
+        sm={4}
+        xs={12}
+        alignContent="center"
+        alignItems="center"
+      >
+        <img
+          alt="my avatar"
+          src={avatar}
+          style={{
+            zIndex: -1,
+            width: "300px",
+            height: "340px",
+            borderRadius: "999px",
+          }}
+        />
+      </Grid>
+    </Grid>
   );
 };
 

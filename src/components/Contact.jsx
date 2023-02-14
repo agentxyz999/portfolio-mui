@@ -31,11 +31,18 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     handleClick();
+    e.target.reset();
   };
   return (
     <Box
       sx={{
-        display: "flex",
+        display: {
+          xl: "flex",
+          lg: "flex",
+          md: "flex",
+          sm: "block",
+          xs: "block",
+        },
         gap: 3,
         alignItems: "center",
         justifyContent: "space-between",
@@ -44,8 +51,25 @@ const Contact = () => {
         backgroundColor: "#242424",
       }}
     >
-      <Box sx={{ maxWidth: "400px" }}>
-        <Typography variant="h2">Contact</Typography>
+      <Box
+        sx={{
+          maxWidth: "400px",
+        }}
+      >
+        <Typography
+          variant="h2"
+          sx={{
+            fontSize: {
+              xl: "60px",
+              lg: "60px",
+              md: "50px",
+              sm: "50px",
+              xs: "32px",
+            },
+          }}
+        >
+          Contact
+        </Typography>
         <Typography
           sx={{
             margin: "30px 0",
@@ -100,6 +124,7 @@ const Contact = () => {
                 <Button
                   sx={{ marginTop: "12px" }}
                   variant="outlined"
+                  color="secondary"
                   endIcon={<SendIcon />}
                   type="submit"
                 >
