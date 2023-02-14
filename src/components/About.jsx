@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, Typography, Grid } from "@mui/material";
 import CallIcon from "@mui/icons-material/Call";
 import SimCardDownloadIcon from "@mui/icons-material/SimCardDownload";
-import avatar from "../assets/avatar.jpg";
+import avatar from "../assets/avatar.png";
 
 const About = ({ scrollToSection, contact }) => {
   const handleDownload = () => {
