@@ -30,6 +30,7 @@ const About = ({ scrollToSection, contact }) => {
           sm: "left",
           xs: "center",
         },
+        zIndex: "-1",
       }}
     >
       {/* About texts container */}
@@ -46,6 +47,7 @@ const About = ({ scrollToSection, contact }) => {
       >
         <Typography
           variant="h2"
+          noWrap
           sx={{
             fontWeight: "bolder",
             letterSpacing: 3,
