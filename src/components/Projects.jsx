@@ -57,6 +57,7 @@ const Projects = ({ scrollToSection, contact }) => {
         container
         gap={2}
         py={2}
+        px="2px"
         border={"1px solid 2f2f2f"}
         borderRadius={1}
       >
