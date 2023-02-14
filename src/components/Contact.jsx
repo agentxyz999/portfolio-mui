@@ -149,7 +149,7 @@ const Contact = () => {
               <Grid xs={12} item>
                 <Button
                   sx={{ marginTop: "12px" }}
-                  variant="outlined"
+                  variant="contained"
                   color="secondary"
                   fullWidth
                   endIcon={<SendIcon />}
