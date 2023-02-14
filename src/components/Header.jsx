@@ -1,9 +1,6 @@
 import React from "react";
-import { Box, Typography, IconButton } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import FacebookIcon from "@mui/icons-material/Facebook";
-import TwitterIcon from "@mui/icons-material/Twitter";
+import { Box, Typography } from "@mui/material";
+import Socials from "./Socials";
 
 const Header = () => {
   const logo = "<rolie.conde />";
@@ -19,20 +16,7 @@ const Header = () => {
       }}
     >
       <Typography variant="h6">{logo}</Typography>
-      <Box>
-        <IconButton>
-          <GitHubIcon />
-        </IconButton>
-        <IconButton>
-          <LinkedInIcon />
-        </IconButton>
-        <IconButton>
-          <FacebookIcon />
-        </IconButton>
-        <IconButton>
-          <TwitterIcon />
-        </IconButton>
-      </Box>
+      <Socials />
     </Box>
   );
 };

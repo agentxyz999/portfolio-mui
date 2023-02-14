@@ -1,8 +1,7 @@
-import * as React from "react";
-import { useRef } from "react";
+import React, { useRef } from "react";
 import { CssBaseline, Stack, Divider } from "@mui/material";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-
+// my components
 import Header from "./components/Header";
 import About from "./components/About";
 import Skills from "./components/Skills";
