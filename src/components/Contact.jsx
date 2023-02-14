@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
-
+import SendIcon from "@mui/icons-material/Send";
+import emailjs from "@emailjs/browser";
 import {
   Box,
   Button,
@@ -11,9 +12,11 @@ import {
   Card,
   CardContent,
 } from "@mui/material";
-import SendIcon from "@mui/icons-material/Send";
 
 const Contact = () => {
+  //if the message is cannot be sent this will display Alert
+  const [errMsg, setErrMsg] = useState(null);
+  const form = useRef();
   // This methods will handle the alert dialog when someone submitted the form
   const Alert = React.forwardRef(function Alert(props, ref) {
     return <MuiAlert elevation={6} ref={ref} variant="filled" {...props} />;
@@ -28,9 +31,29 @@ const Contact = () => {
     }
     setOpenAlert(false);
   };
-  const handleSubmit = (e) => {
+  const sendMessage = (e) => {
     e.preventDefault();
-    handleClick();
+    //this is where the email will be sent
+    emailjs
+      .sendForm(
+        "service_3y08uij",
+        "template_06bwi0y",
+        form.current,
+        "UTFehf1DeO949efHV"
+      )
+      .then(
+        (result) => {
+          setErrMsg(null);
+          // console.log(result.text);
+          handleClick();
+        },
+        (error) => {
+          // console.log(error.text);
+          handleClick();
+          setErrMsg("Unable to send at the moment.");
+        }
+      );
+
     e.target.reset();
   };
   return (
@@ -89,12 +112,13 @@ const Contact = () => {
         }}
       >
         <CardContent>
-          <form onSubmit={handleSubmit}>
+          <form ref={form} onSubmit={sendMessage}>
             <Grid container spacing={1}>
               <Grid xs={12} item>
                 <TextField
                   id="name"
                   label="Name"
+                  name="name"
                   variant="standard"
                   fullWidth
                   required
@@ -104,6 +128,7 @@ const Contact = () => {
                 <TextField
                   id="email"
                   label="Email"
+                  name="email"
                   variant="standard"
                   fullWidth
                   required
@@ -113,6 +138,7 @@ const Contact = () => {
                 <TextField
                   id="message"
                   label="Message"
+                  name="message"
                   variant="standard"
                   multiline
                   rows={3}
@@ -137,8 +163,12 @@ const Contact = () => {
         </CardContent>
       </Card>
       <Snackbar open={openAlert} autoHideDuration={5000} onClose={handleClose}>
-        <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
-          Your message has been sent, thank you!
+        <Alert
+          onClose={handleClose}
+          severity={errMsg ? "error" : "success"}
+          sx={{ width: "100%" }}
+        >
+          {errMsg ? errMsg : "Your message has been sent, thank you!"}
         </Alert>
       </Snackbar>
     </Box>
