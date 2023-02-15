@@ -67,7 +67,7 @@ const Contact = () => {
           xs: "block",
         },
         gap: 3,
-        alignItems: "center",
+
         justifyContent: "space-between",
         padding: "10px 4px",
         marginTop: "2px",
