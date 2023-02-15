@@ -119,6 +119,7 @@ const About = ({ scrollToSection, contact }) => {
         xs={12}
         alignContent="center"
         alignItems="center"
+        justifyContent="flex-end"
         textAlign="center"
         sx={{ flexShrink: 1 }}
       >
