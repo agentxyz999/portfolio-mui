@@ -15,6 +15,8 @@ const About = ({ scrollToSection, contact }) => {
     <Grid
       container
       rowSpacing={2}
+      py={1}
+      px={1}
       sx={{
         textAlign: {
           xl: "left",
@@ -58,7 +60,10 @@ const About = ({ scrollToSection, contact }) => {
           <br /> I'm{" "}
           <Typography
             variant="span"
-            sx={{ borderBottom: "4px solid #CE93D8", fontStyle: "italic" }}
+            sx={{
+              fontStyle: "italic",
+              textDecoration: "underline #CE93D8",
+            }} //#CE93D8
           >
             Rolie Conde
           </Typography>
@@ -105,6 +110,7 @@ const About = ({ scrollToSection, contact }) => {
         </Box>
       </Grid>
       <Grid
+        container
         item
         xl={4}
         lg={4}
@@ -113,6 +119,8 @@ const About = ({ scrollToSection, contact }) => {
         xs={12}
         alignContent="center"
         alignItems="center"
+        textAlign="center"
+        sx={{ flexShrink: 1 }}
       >
         <img
           alt="my avatar"
@@ -121,7 +129,8 @@ const About = ({ scrollToSection, contact }) => {
             zIndex: -1,
             width: "300px",
             height: "340px",
-            borderRadius: "999px",
+            borderRadius: "20px",
+            margin: "0 auto",
           }}
         />
       </Grid>

@@ -31,7 +31,7 @@ const App = () => {
         sx={{
           margin: "0 auto",
           maxWidth: {
-            xl: "50%",
+            xl: "60%",
             lg: "75%",
             md: "85%",
             sm: "100%",
