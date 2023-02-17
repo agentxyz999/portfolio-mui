@@ -106,6 +106,7 @@ const Projects = ({ scrollToSection, contact }) => {
                       sm: "400px",
                       xs: "400px",
                     },
+                    backgroundColor: "#2f2f2f",
                   }}
                 >
                   <CardActionArea>

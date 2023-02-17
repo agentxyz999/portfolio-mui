@@ -23,11 +23,7 @@ const Skills = () => {
       container
       spacing={{ xs: 2, sm: 3, md: 3 }}
       columns={{ xs: 2, sm: 12, md: 12 }}
-      sx={
-        {
-          // bgcolor: { lg: "green", md: "yellow", sm: "red", xs: "orange" },
-        }
-      }
+      padding={{ xs: 1, sm: 1, md: 1, lg: 0, xl: 0 }}
     >
       {tools.map((tool, index) => {
         return (
@@ -41,11 +37,12 @@ const Skills = () => {
                   sm: "26px",
                   xs: "22px",
                 },
+                borderLeft: "2px solid #61346b",
               }}
             >
               {tool.name}
             </Item>
-            <Item>{tool.year}</Item>
+            <Item sx={{ borderLeft: "2px solid #61346b" }}>{tool.year}</Item>
           </Grid>
         );
       })}
