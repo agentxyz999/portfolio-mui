@@ -37,12 +37,12 @@ const Skills = () => {
                   sm: "26px",
                   xs: "22px",
                 },
-                borderLeft: "2px solid #61346b",
+                borderLeft: "4px solid #61346b",
               }}
             >
               {tool.name}
             </Item>
-            <Item sx={{ borderLeft: "2px solid #61346b" }}>{tool.year}</Item>
+            <Item sx={{ borderLeft: "4px solid #61346b" }}>{tool.year}</Item>
           </Grid>
         );
       })}
