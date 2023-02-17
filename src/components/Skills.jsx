@@ -21,7 +21,7 @@ const Skills = () => {
   return (
     <Grid
       container
-      spacing={{ xs: 2, sm: 3, md: 3 }}
+      spacing={{ xs: 2 }}
       columns={{ xs: 2, sm: 12, md: 12 }}
       padding={{ xs: 1, sm: 1, md: 1, lg: 0, xl: 0 }}
     >
