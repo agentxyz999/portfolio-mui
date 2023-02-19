@@ -39,7 +39,7 @@ const Projects = ({ scrollToSection, contact }) => {
       title: "Online Portfolio",
       description: "Online Portfolio screenshot",
       img: portfolio,
-      tools: ["React", "Material UI"],
+      tools: ["React", "Material UI", "EmailJS"],
       url: "https://rconde-portfolio.netlify.app/",
     },
     {
