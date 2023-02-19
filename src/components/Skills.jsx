@@ -9,7 +9,7 @@ const Skills = () => {
     { name: "CSS", year: "Junior" },
     { name: "Javascript", year: "Intermediate" },
     { name: "React", year: "Beginner" },
-    { name: "Bootstap", year: "Beginner" },
+    { name: "Bootstrap", year: "Beginner" },
     { name: "Git", year: "Beginner" },
   ];
   const Item = styled(Paper)(({ theme }) => ({
