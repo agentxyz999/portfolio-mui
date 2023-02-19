@@ -69,7 +69,7 @@ const Contact = () => {
         gap: 3,
 
         justifyContent: "space-between",
-        padding: "10px 4px",
+        padding: "10px 20px",
         marginTop: "2px",
         backgroundColor: "#242424",
       }}
@@ -113,7 +113,7 @@ const Contact = () => {
       >
         <CardContent>
           <form ref={form} onSubmit={sendMessage}>
-            <Grid container spacing={1}>
+            <Grid container spacing={1} sx={{ border: "none" }}>
               <Grid xs={12} item>
                 <TextField
                   id="name"

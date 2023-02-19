@@ -44,10 +44,10 @@ const App = () => {
           <Header />
         </Grid>
         <Grid item>
-          <About scrollToSection={scrollToSection} contact={contact} />
+          <Divider />
         </Grid>
         <Grid item>
-          <Divider textAlign="left">Skills</Divider>
+          <About scrollToSection={scrollToSection} contact={contact} />
         </Grid>
         <Grid item>
           <Skills />

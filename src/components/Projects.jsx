@@ -61,7 +61,13 @@ const Projects = ({ scrollToSection, contact }) => {
         border={"1px solid 2f2f2f"}
         borderRadius={1}
       >
-        <Grid container item justifyContent="space-between" alignItems="center">
+        <Grid
+          container
+          item
+          justifyContent="space-between"
+          alignItems="center"
+          px={2}
+        >
           <Typography
             variant="h2"
             sx={{
