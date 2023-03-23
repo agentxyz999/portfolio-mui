@@ -8,8 +8,8 @@ const About = ({ scrollToSection, contact }) => {
   const handleDownload = () => {
     console.log("Download");
     window.open(
-      "https://drive.google.com/file/d/1P8ZU-IVghVxAs0_E3lSO_MWzt_QFLzJA/view?usp=sharing"
-    );
+"https://drive.google.com/file/d/1sUcyKt5IBouPUm9OrZjfAHrqT3a5Rc8d/view?usp=drivesdk"    
+);
   };
   return (
     <Grid
