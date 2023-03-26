@@ -106,13 +106,14 @@ const Projects = ({ scrollToSection, contact }) => {
                 <Card
                   sx={{
                     width: {
-                      xl: "380px",
-                      lg: "380px",
+                      xl: "440px",
+                      lg: "440px",
                       md: "360px",
                       sm: "400px",
                       xs: "400px",
                     },
                     backgroundColor: "#2f2f2f",
+                    margin: "10px 0",
                   }}
                 >
                   <CardActionArea>
@@ -123,7 +124,7 @@ const Projects = ({ scrollToSection, contact }) => {
                       alt={project.description}
                     />
                     <CardContent>
-                      <Typography gutterBottom variant="h5" component="div">
+                      <Typography gutterBottom variant="h6" component="div">
                         {project.title}
                       </Typography>
                       <Typography variant="body2" color="text.secondary">
@@ -143,7 +144,7 @@ const Projects = ({ scrollToSection, contact }) => {
                       color="secondary"
                       variant="contained"
                       startIcon={<LaunchIcon />}
-                      sx={{ mx: 1 }}
+                      sx={{ mx: 1, marginBottom: 1 }}
                       onClick={() => {
                         window.open(project?.url);
                       }}
