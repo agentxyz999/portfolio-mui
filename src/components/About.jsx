@@ -8,7 +8,7 @@ const About = ({ scrollToSection, contact }) => {
   const handleDownload = () => {
     console.log("Download");
     window.open(
-      "https://drive.google.com/file/d/1P8ZU-IVghVxAs0_E3lSO_MWzt_QFLzJA/view?usp=sharing"
+      "https://drive.google.com/file/d/1FhrsosRDNa2AKsoPiLM6McRs2YeJWFiz/view?usp=share_link"
     );
   };
   return (
