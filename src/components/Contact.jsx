@@ -109,6 +109,7 @@ const Contact = () => {
       <Card
         sx={{
           backgroundColor: "inherit",
+          boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
         }}
       >
         <CardContent>

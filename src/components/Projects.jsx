@@ -87,7 +87,11 @@ const Projects = ({ scrollToSection, contact }) => {
             color="secondary"
             size="medium"
             startIcon={<CallIcon />}
-            sx={{ maxWidth: "180px", maxHeight: "40px" }}
+            sx={{
+              maxWidth: "180px",
+              maxHeight: "40px",
+              boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+            }}
             onClick={() => scrollToSection(contact)} //from App.js
           >
             Contact me.
@@ -113,7 +117,8 @@ const Projects = ({ scrollToSection, contact }) => {
                       xs: "400px",
                     },
                     backgroundColor: "#2f2f2f",
-                    margin: "10px 0",
+                    margin: "6px 0",
+                    boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
                   }}
                 >
                   <CardActionArea>
@@ -144,7 +149,14 @@ const Projects = ({ scrollToSection, contact }) => {
                       color="secondary"
                       variant="contained"
                       startIcon={<LaunchIcon />}
-                      sx={{ mx: 1, marginBottom: 1 }}
+                      sx={{
+                        mx: 1,
+                        marginBottom: 1,
+                        boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+                        "&:hover": {
+                          boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+                        },
+                      }}
                       onClick={() => {
                         window.open(project?.url);
                       }}

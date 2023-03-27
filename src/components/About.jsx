@@ -92,7 +92,13 @@ const About = ({ scrollToSection, contact }) => {
             color="secondary"
             size="large"
             startIcon={<CallIcon />}
-            sx={{ maxWidth: "180px" }}
+            sx={{
+              maxWidth: "180px",
+              boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+              "&:hover": {
+                boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+              },
+            }}
             onClick={() => scrollToSection(contact)} //from App.js
           >
             Contact me.
@@ -102,7 +108,14 @@ const About = ({ scrollToSection, contact }) => {
             color="primary"
             size="large"
             startIcon={<SimCardDownloadIcon />}
-            sx={{ maxWidth: "180px", marginLeft: "20px" }}
+            sx={{
+              maxWidth: "180px",
+              marginLeft: "20px",
+              boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+              "&:hover": {
+                boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+              },
+            }}
             onClick={handleDownload}
           >
             Download CV
