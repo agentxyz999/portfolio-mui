@@ -36,17 +36,7 @@ const About = ({ scrollToSection, contact }) => {
       }}
     >
       {/* About texts container */}
-      <Grid
-        container
-        direction="column"
-        gap={3}
-        item
-        xl={8}
-        lg={8}
-        md={8}
-        sm={8}
-        xs={12}
-      >
+      <Grid container direction="column" gap={3} item xl={8} lg={8} md={8} sm={8} xs={12}>
         <Typography
           variant="h2"
           noWrap
@@ -83,8 +73,8 @@ const About = ({ scrollToSection, contact }) => {
             },
           }}
         >
-          Based in the Philippines, I'm a front-end developer passionate about
-          building accessible web apps that users love.
+          Based in the Philippines, I'm a front-end developer passionate about building accessible
+          web apps that users love.
         </Typography>
         <Box>
           <Button
@@ -96,7 +86,10 @@ const About = ({ scrollToSection, contact }) => {
               maxWidth: "180px",
               boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
               "&:hover": {
-                boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+                backgroundColor: "#210d24",
+                boxShadow: "0px 8px 4px 2px rgba(0, 0, 0, 0.6)",
+                transform: "translateY(-2px)",
+                transition: "transform 0.3s ease-in-out",
               },
             }}
             onClick={() => scrollToSection(contact)} //from App.js
@@ -114,6 +107,8 @@ const About = ({ scrollToSection, contact }) => {
               boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
               "&:hover": {
                 boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+                transform: "translateY(-2px)",
+                transition: "transform 0.3s ease-in-out",
               },
             }}
             onClick={handleDownload}

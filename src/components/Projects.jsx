@@ -53,21 +53,8 @@ const Projects = ({ scrollToSection, contact }) => {
   ];
   return (
     <Card sx={{ marginTop: "6px" }}>
-      <Grid
-        container
-        gap={2}
-        py={2}
-        px="2px"
-        border={"1px solid 2f2f2f"}
-        borderRadius={1}
-      >
-        <Grid
-          container
-          item
-          justifyContent="space-between"
-          alignItems="center"
-          px={2}
-        >
+      <Grid container gap={2} py={2} px="2px" border={"1px solid 2f2f2f"} borderRadius={1}>
+        <Grid container item justifyContent="space-between" alignItems="center" px={2}>
           <Typography
             variant="h2"
             sx={{
@@ -91,19 +78,19 @@ const Projects = ({ scrollToSection, contact }) => {
               maxWidth: "180px",
               maxHeight: "40px",
               boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+              "&:hover": {
+                backgroundColor: "#210d24",
+                boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+                transform: "translateY(-2px)",
+                transition: "transform 0.3s ease-in-out",
+              },
             }}
             onClick={() => scrollToSection(contact)} //from App.js
           >
             Contact me.
           </Button>
         </Grid>
-        <Grid
-          container
-          item
-          alignItems="center"
-          justifyContent="center"
-          gap={1}
-        >
+        <Grid container item alignItems="center" justifyContent="center" gap={1}>
           {projects.map((project) => {
             return (
               <Grid key={project.id} item>
@@ -155,6 +142,8 @@ const Projects = ({ scrollToSection, contact }) => {
                         boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
                         "&:hover": {
                           boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+                          transform: "translateY(-2px)",
+                          transition: "transform 0.3s ease-in-out",
                         },
                       }}
                       onClick={() => {
