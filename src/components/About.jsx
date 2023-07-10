@@ -18,21 +18,9 @@ const About = ({ scrollToSection, contact }) => {
       py={1}
       px={1}
       sx={{
-        textAlign: {
-          xl: "left",
-          lg: "left",
-          md: "left",
-          sm: "left",
-          xs: "center",
-        },
-        justifyContents: {
-          xl: "left",
-          lg: "left",
-          md: "left",
-          sm: "left",
-          xs: "center",
-        },
-        zIndex: "-1",
+        textAlign: { xs: "center", sm: "left" },
+        justifyContent: { xs: "center", sm: "left" },
+        zIndex: -1,
       }}
     >
       {/* About texts container */}
@@ -65,11 +53,8 @@ const About = ({ scrollToSection, contact }) => {
             lineHeight: "32px",
             fontSize: "16px",
             maxWidth: {
-              xl: "55%",
-              lg: "55%",
-              md: "55%",
-              sm: "55%",
               xs: "100%",
+              sm: "55%",
             },
           }}
         >
@@ -137,7 +122,7 @@ const About = ({ scrollToSection, contact }) => {
           style={{
             zIndex: -1,
             width: "300px",
-            height: "340px",
+            height: "auto",
             borderRadius: "20px",
             margin: "0 auto",
           }}
