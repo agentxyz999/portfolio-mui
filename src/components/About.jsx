@@ -31,7 +31,7 @@ const About = ({ scrollToSection, contact }) => {
           sx={{
             fontWeight: "bolder",
             letterSpacing: 3,
-            fontSize: { md: "50px", sm: "50px", xs: "32px" },
+            fontSize: { md: "3.8rem", sm: "2.4rem", xs: "2rem" },
           }}
         >
           Nice to meet you!
