@@ -3,15 +3,7 @@ import Snackbar from "@mui/material/Snackbar";
 import MuiAlert from "@mui/material/Alert";
 import SendIcon from "@mui/icons-material/Send";
 import emailjs from "@emailjs/browser";
-import {
-  Box,
-  Button,
-  Typography,
-  TextField,
-  Grid,
-  Card,
-  CardContent,
-} from "@mui/material";
+import { Box, Button, Typography, TextField, Grid, Card, CardContent } from "@mui/material";
 
 const Contact = () => {
   //if the message is cannot be sent this will display Alert
@@ -34,25 +26,18 @@ const Contact = () => {
   const sendMessage = (e) => {
     e.preventDefault();
     //this is where the email will be sent
-    emailjs
-      .sendForm(
-        "service_3y08uij",
-        "template_06bwi0y",
-        form.current,
-        "UTFehf1DeO949efHV"
-      )
-      .then(
-        (result) => {
-          setErrMsg(null);
-          // console.log(result.text);
-          handleClick();
-        },
-        (error) => {
-          // console.log(error.text);
-          handleClick();
-          setErrMsg("Unable to send at the moment.");
-        }
-      );
+    emailjs.sendForm("service_3y08uij", "template_06bwi0y", form.current, "UTFehf1DeO949efHV").then(
+      (result) => {
+        setErrMsg(null);
+        // console.log(result.text);
+        handleClick();
+      },
+      (error) => {
+        // console.log(error.text);
+        handleClick();
+        setErrMsg("Unable to send at the moment.");
+      }
+    );
 
     e.target.reset();
   };
@@ -101,8 +86,8 @@ const Contact = () => {
             fontSize: "16px",
           }}
         >
-          I would like to hear about your project and how I could help. Please
-          fill in the form, and I'll get back to you as soon as possible.
+          I would like to hear about your project and how I could help. Please fill in the form, and
+          I'll get back to you as soon as possible.
         </Typography>
       </Box>
       {/* Form */}
@@ -149,12 +134,30 @@ const Contact = () => {
               </Grid>
               <Grid xs={12} item>
                 <Button
-                  sx={{ marginTop: "12px" }}
                   variant="contained"
                   color="secondary"
                   fullWidth
                   endIcon={<SendIcon />}
                   type="submit"
+                  sx={{
+                    marginTop: "12px",
+                    backgroundImage:
+                      " linear-gradient(to right, #AA076B 0%, #61045F  51%, #FF0084  100%)",
+                    margin: "10px",
+                    padding: "15px 45px",
+                    textTransform: "uppercase",
+                    transition: "0.5s",
+                    backgroundSize: "200% auto",
+                    color: "white",
+                    boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+                    borderRadius: "10px",
+                    "&:hover": {
+                      backgroundPosition: "right center",
+                      color: "#fff",
+                      textDecoration: "none",
+                      boxShadow: "0px 8px 4px 2px rgba(0, 0, 0, 0.6)",
+                    },
+                  }}
                 >
                   Send
                 </Button>
@@ -164,11 +167,7 @@ const Contact = () => {
         </CardContent>
       </Card>
       <Snackbar open={openAlert} autoHideDuration={5000} onClose={handleClose}>
-        <Alert
-          onClose={handleClose}
-          severity={errMsg ? "error" : "success"}
-          sx={{ width: "100%" }}
-        >
+        <Alert onClose={handleClose} severity={errMsg ? "error" : "success"} sx={{ width: "100%" }}>
           {errMsg ? errMsg : "Your message has been sent, thank you!"}
         </Alert>
       </Snackbar>

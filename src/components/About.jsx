@@ -15,7 +15,7 @@ const About = ({ scrollToSection, contact }) => {
     <Grid
       container
       rowSpacing={2}
-      py={1}
+      py={4}
       px={1}
       sx={{
         textAlign: { xs: "center", sm: "left" },
@@ -68,13 +68,23 @@ const About = ({ scrollToSection, contact }) => {
             size="large"
             startIcon={<CallIcon />}
             sx={{
+              backgroundImage:
+                " linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%)",
+              backgroundSize: "200% auto",
+              transition: "0.5s",
+              border: "none",
+              outline: "none",
               maxWidth: "180px",
               boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
               "&:hover": {
+                backgroundPosition: "right center",
+                color: "#fff",
                 backgroundColor: "#210d24",
                 boxShadow: "0px 8px 4px 2px rgba(0, 0, 0, 0.6)",
                 transform: "translateY(-2px)",
                 transition: "transform 0.3s ease-in-out",
+                border: "none",
+                outline: "none",
               },
             }}
             onClick={() => scrollToSection(contact)} //from App.js

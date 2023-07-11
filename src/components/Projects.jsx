@@ -75,14 +75,24 @@ const Projects = ({ scrollToSection, contact }) => {
             size="medium"
             startIcon={<CallIcon />}
             sx={{
+              backgroundImage:
+                " linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%)",
+              backgroundSize: "200% auto",
+              transition: "0.5s",
+              boxShadow: "0 0 20px #eee",
+              border: "none",
+              outline: "none",
               maxWidth: "180px",
-              maxHeight: "40px",
               boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
               "&:hover": {
+                backgroundPosition: "right center",
+                color: "#fff",
                 backgroundColor: "#210d24",
-                boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+                boxShadow: "0px 8px 4px 2px rgba(0, 0, 0, 0.6)",
                 transform: "translateY(-2px)",
                 transition: "transform 0.3s ease-in-out",
+                border: "none",
+                outline: "none",
               },
             }}
             onClick={() => scrollToSection(contact)} //from App.js
@@ -133,14 +143,22 @@ const Projects = ({ scrollToSection, contact }) => {
                   <CardActions>
                     <Button
                       size="small"
-                      color="secondary"
                       variant="contained"
                       startIcon={<LaunchIcon />}
                       sx={{
+                        color: "#eee",
+                        backgroundImage:
+                          " linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%)",
+                        backgroundSize: "200% auto",
+                        transition: "0.5s",
+                        border: "none",
+                        outline: "none",
                         mx: 1,
                         marginBottom: 1,
-                        boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
+                        boxShadow: "0px 2px 2px 1px rgba(0, 0, 0, 0.9)",
                         "&:hover": {
+                          backgroundPosition: "right center",
+                          color: "#fff",
                           boxShadow: "0px 5px 2px 1px rgba(0, 0, 0, 0.9)",
                           transform: "translateY(-2px)",
                           transition: "transform 0.3s ease-in-out",
@@ -150,7 +168,7 @@ const Projects = ({ scrollToSection, contact }) => {
                         window.open(project?.url);
                       }}
                     >
-                      Visit
+                      LIVE VIEW
                     </Button>
                   </CardActions>
                 </Card>
