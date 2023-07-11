@@ -79,7 +79,6 @@ const Projects = ({ scrollToSection, contact }) => {
                 " linear-gradient(to right, #AA076B 0%, #61045F  51%, #AA076B  100%)",
               backgroundSize: "200% auto",
               transition: "0.5s",
-              boxShadow: "0 0 20px #eee",
               border: "none",
               outline: "none",
               maxWidth: "180px",
