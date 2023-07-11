@@ -52,18 +52,13 @@ const Contact = () => {
           xs: "block",
         },
         gap: 3,
-
         justifyContent: "space-between",
         padding: "10px 20px",
         marginTop: "2px",
         backgroundColor: "#242424",
       }}
     >
-      <Box
-        sx={{
-          maxWidth: "400px",
-        }}
-      >
+      <Box sx={{ maxWidth: "400px" }}>
         <Typography
           variant="h2"
           sx={{
